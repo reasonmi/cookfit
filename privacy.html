@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CookFit 개인정보 처리방침</title>
+<meta name="description" content="CookFit 앱의 개인정보 처리방침입니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Pretendard:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FBF7F0;
+    --card: #FFFFFF;
+    --ink: #2B2522;
+    --ink-soft: #6B5F57;
+    --accent: #D9603B;
+    --accent-soft: #F4E3D7;
+    --line: #EBE2D6;
+    --leaf: #7C8C5A;
+    --radius: 18px;
+    --shadow: 0 1px 2px rgba(43,37,34,.04), 0 8px 24px rgba(43,37,34,.06);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    padding: 72px 0 40px;
+    border-bottom: 1px solid var(--line);
+  }
+  .back {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--ink-soft); text-decoration: none;
+    font-size: 14px; font-weight: 500;
+    margin-bottom: 28px;
+    transition: color .15s ease;
+  }
+  .back:hover { color: var(--accent); }
+  .back:focus-visible { outline: 2px solid var(--leaf); outline-offset: 3px; border-radius: 4px; }
+  h1 {
+    font-family: 'Gowun Batang', serif;
+    font-size: clamp(30px, 6vw, 40px);
+    font-weight: 700;
+    letter-spacing: -.01em;
+    margin-bottom: 14px;
+  }
+  .meta {
+    display: flex; flex-wrap: wrap; gap: 8px 20px;
+    font-size: 14px; color: var(--ink-soft);
+  }
+  .meta b { color: var(--ink); font-weight: 700; }
+
+  .intro {
+    margin: 36px 0 8px;
+    font-size: 16px;
+    color: var(--ink-soft);
+  }
+
+  section {
+    padding: 30px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  section:last-of-type { border-bottom: none; }
+  h2 {
+    font-family: 'Gowun Batang', serif;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex; align-items: baseline; gap: 12px;
+  }
+  h2 .n {
+    color: var(--accent);
+    font-size: 16px;
+  }
+  p { margin-bottom: 12px; font-size: 15.5px; color: var(--ink-soft); }
+  p:last-child { margin-bottom: 0; }
+  p strong, li strong { color: var(--ink); font-weight: 700; }
+  ul { list-style: none; margin: 4px 0 12px; }
+  li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    font-size: 15.5px;
+    color: var(--ink-soft);
+  }
+  li::before {
+    content: "";
+    position: absolute; left: 4px; top: 12px;
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--leaf);
+  }
+  a.inline { color: var(--accent); font-weight: 500; }
+
+  .callout {
+    background: var(--accent-soft);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    margin: 4px 0 8px;
+    font-size: 15px;
+    color: #8A4327;
+  }
+  .callout strong { color: #6E3318; }
+
+  footer {
+    padding: 40px 0 64px;
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 13px;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="back" href="index.html">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        지원 페이지로
+      </a>
+      <h1>개인정보 처리방침</h1>
+      <div class="meta">
+        <span><b>앱명</b> &nbsp;CookFit</span>
+        <span><b>시행일</b> &nbsp;2026년 6월 14일</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="intro">
+      CookFit(이하 "본 앱")은 사용자의 개인정보를 소중히 여기며, 최소한의 정보만을 처리합니다.
+      본 앱은 별도의 서버를 운영하지 않고, 사용자 계정을 만들지 않으며, 모든 레시피 데이터를 사용자 기기 안에 보관합니다.
+    </p>
+
+    <section>
+      <h2><span class="n">1</span> 수집·처리하는 정보</h2>
+      <p>본 앱은 회원가입이나 로그인을 요구하지 않으며, 이름·연락처 등 개인 식별 정보를 수집하지 않습니다. 앱 사용 과정에서 다음 데이터가 처리됩니다.</p>
+      <ul>
+        <li><strong>사진 라이브러리 접근</strong> — 레시피 캡처 이미지와 요리 기록 사진을 불러오기 위해 사용자가 허용한 경우에만 접근합니다.</li>
+        <li><strong>레시피 및 요리 기록 데이터</strong> — 사용자가 입력하거나 저장한 정보로, 기기 내부에만 저장됩니다.</li>
+        <li><strong>텍스트 인식 결과</strong> — 레시피 정리를 위해 이미지에서 추출한 텍스트가 아래 제3자 AI 서비스로 전송됩니다.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n">2</span> 제3자 서비스 (AI 분석)</h2>
+      <p>본 앱은 레시피를 자동으로 정리하기 위해 <strong>Google Gemini API</strong>를 사용합니다. 이미지에서 추출한 텍스트가 Google 서버로 전송되어 재료·조리 순서로 구조화됩니다.</p>
+      <ul>
+        <li>전송되는 데이터는 <strong>이미지에서 추출한 텍스트</strong>이며, 원본 이미지나 사진 자체는 전송되지 않습니다.</li>
+        <li>전송된 데이터의 처리·보관에는 Google의 정책이 적용됩니다. 자세한 내용은 <a class="inline" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>을 참고하세요.</li>
+        <li>본 앱은 전송된 텍스트를 자체적으로 저장하거나 다른 목적으로 활용하지 않습니다.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n">3</span> 데이터 저장 위치 및 보관 기간</h2>
+      <p>모든 레시피와 요리 기록은 <strong>사용자 기기 내 로컬 저장소</strong>에만 보관되며, 본 앱이 운영하는 서버나 클라우드에 업로드되지 않습니다.</p>
+      <p>기기에 저장된 데이터는 사용자가 직접 삭제하거나 앱을 제거하기 전까지 보관됩니다. AI 분석을 위해 Google로 전송된 텍스트의 보관 기간은 Google의 정책을 따릅니다.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">4</span> 사용자의 권리와 데이터 삭제</h2>
+      <p>사용자는 언제든지 앱 내에서 개별 레시피나 요리 기록을 삭제할 수 있습니다.</p>
+      <div class="callout">
+        <strong>앱을 삭제하면</strong> 기기에 저장된 모든 레시피와 요리 기록이 함께 삭제되며, 복구할 수 없습니다.
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="n">5</span> 아동의 개인정보</h2>
+      <p>본 앱은 만 13세 미만 아동을 주 대상으로 하지 않으며, 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">6</span> 방침의 변경</h2>
+      <p>본 방침은 법령이나 앱 기능 변경에 따라 수정될 수 있습니다. 중요한 변경이 있을 경우 본 페이지를 통해 공지하며, 변경된 방침은 게시 시점부터 적용됩니다.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">7</span> 문의</h2>
+      <p>개인정보 처리에 관한 문의는 아래로 연락해 주세요.</p>
+      <p><strong>이메일</strong> &nbsp;<a class="inline" href="mailto:rumi.maker@gmail.com">rumi.maker@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <a href="index.html">지원 페이지</a> · <a href="mailto:rumi.maker@gmail.com">문의 이메일</a>
+      <p style="margin-top:12px;">© 2026 CookFit</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CookFit 지원 — 도움말 & 문의</title>
+<meta name="description" content="CookFit 앱 지원 페이지. 자주 묻는 질문과 문의 방법을 안내합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Pretendard:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FBF7F0;
+    --card: #FFFFFF;
+    --ink: #2B2522;
+    --ink-soft: #6B5F57;
+    --accent: #D9603B;       /* 토마토 / 당근 톤 */
+    --accent-soft: #F4E3D7;
+    --line: #EBE2D6;
+    --leaf: #7C8C5A;         /* 허브 그린 */
+    --radius: 18px;
+    --shadow: 0 1px 2px rgba(43,37,34,.04), 0 8px 24px rgba(43,37,34,.06);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---- Hero ---- */
+  header {
+    padding: 88px 0 56px;
+    text-align: center;
+    position: relative;
+  }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 13px; font-weight: 700;
+    padding: 7px 16px; border-radius: 999px;
+    letter-spacing: .02em;
+    margin-bottom: 28px;
+  }
+  .badge::before { content: "🍳"; font-size: 15px; }
+  h1 {
+    font-family: 'Gowun Batang', serif;
+    font-size: clamp(34px, 7vw, 48px);
+    font-weight: 700;
+    letter-spacing: -.01em;
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
+  h1 .mark { color: var(--accent); }
+  .lede {
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 460px;
+    margin: 0 auto;
+  }
+
+  /* ---- Section ---- */
+  section { padding: 40px 0; }
+  .eyebrow {
+    font-size: 12px; font-weight: 700;
+    letter-spacing: .14em; text-transform: uppercase;
+    color: var(--leaf);
+    margin-bottom: 18px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .eyebrow::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+  /* ---- FAQ ---- */
+  .faq { display: flex; flex-direction: column; gap: 14px; }
+  details {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: border-color .2s ease;
+  }
+  details[open] { border-color: var(--accent-soft); }
+  summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 20px 22px;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary .q {
+    display: flex; align-items: baseline; gap: 12px;
+  }
+  summary .num {
+    font-family: 'Gowun Batang', serif;
+    color: var(--accent);
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  summary .chev {
+    flex-shrink: 0;
+    width: 22px; height: 22px;
+    color: var(--ink-soft);
+    transition: transform .25s ease;
+  }
+  details[open] summary .chev { transform: rotate(45deg); }
+  details .body {
+    padding: 0 22px 22px 50px;
+    color: var(--ink-soft);
+    font-size: 15px;
+  }
+  details .body :is(strong) { color: var(--ink); }
+
+  /* ---- Contact card ---- */
+  .contact {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 36px 28px;
+    text-align: center;
+  }
+  .contact h3 {
+    font-family: 'Gowun Batang', serif;
+    font-size: 22px; font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .contact p { color: var(--ink-soft); font-size: 15px; margin-bottom: 24px; }
+  .mail-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700; font-size: 16px;
+    padding: 14px 28px;
+    border-radius: 999px;
+    transition: transform .15s ease, box-shadow .15s ease;
+    box-shadow: 0 6px 18px rgba(217,96,59,.28);
+  }
+  .mail-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(217,96,59,.34); }
+  .mail-btn:focus-visible { outline: 3px solid var(--leaf); outline-offset: 3px; }
+  .reply-note { margin-top: 16px; font-size: 13px; color: var(--ink-soft); }
+
+  /* ---- Footer ---- */
+  footer {
+    padding: 48px 0 64px;
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 13px;
+  }
+  footer a { color: var(--accent); text-decoration: none; font-weight: 500; }
+  footer a:hover { text-decoration: underline; }
+  footer .dot { margin: 0 8px; opacity: .4; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <span class="badge">CookFit 지원</span>
+      <h1>무엇을 도와드릴까요?<br><span class="mark">레시피</span>는 CookFit이 정리할게요</h1>
+      <p class="lede">자주 묻는 질문을 먼저 확인해보세요. 답이 없다면 언제든 이메일로 연락 주세요.</p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <p class="eyebrow">자주 묻는 질문</p>
+        <div class="faq">
+
+          <details open>
+            <summary>
+              <span class="q"><span class="num">01</span><span>레시피는 어떻게 저장하나요?</span></span>
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <div class="body">
+              앨범에서 레시피 캡처 이미지를 선택하면 CookFit이 글자를 읽어내고, 재료와 조리 순서를 자동으로 카드 형태로 정리해줍니다. 정리된 결과는 언제든 직접 편집할 수 있어요.
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span class="q"><span class="num">02</span><span>자동 정리가 하루에 몇 번까지 되나요?</span></span>
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <div class="body">
+              AI 자동 정리는 <strong>하루 10회까지</strong> 무료로 제공됩니다. 한도를 다 쓰면 다음 날 다시 채워지며, 그 사이에도 빈 양식에 직접 입력해 레시피를 <strong>무제한으로 저장</strong>할 수 있어요.
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span class="q"><span class="num">03</span><span>내 레시피는 어디에 저장되나요?</span></span>
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <div class="body">
+              모든 레시피와 요리 기록은 <strong>내 기기 안에만</strong> 저장됩니다. 별도 계정이나 로그인이 필요 없고, 서버에 업로드되지 않아요. 자동 정리 과정에서 캡처한 텍스트만 분석을 위해 처리됩니다. 자세한 내용은 <a href="privacy.html">개인정보 처리방침</a>을 확인하세요.
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span class="q"><span class="num">04</span><span>'해봤어요' 기록은 무엇인가요?</span></span>
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <div class="body">
+              레시피를 따라 직접 만든 요리의 사진과 메모, 다시 만들 의향을 남기는 기능입니다. 같은 레시피에 여러 번의 도전을 쌓아 나만의 요리 기록을 만들 수 있어요. 원본 레시피는 그대로 보존됩니다.
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span class="q"><span class="num">05</span><span>앱을 삭제하면 데이터는 어떻게 되나요?</span></span>
+              <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            </summary>
+            <div class="body">
+              데이터가 기기 안에만 저장되므로, 앱을 삭제하면 저장된 레시피와 요리 기록도 함께 사라집니다. 중요한 레시피는 삭제 전 원본 이미지를 따로 보관해두시길 권합니다.
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <p class="eyebrow">문의하기</p>
+        <div class="contact">
+          <h3>아직 궁금한 게 있나요?</h3>
+          <p>버그 제보, 기능 제안, 그 밖의 문의를 환영합니다.<br>아래 버튼으로 메일을 보내주세요.</p>
+          <a class="mail-btn" href="mailto:rumi.maker@gmail.com?subject=%5BCookFit%5D%20%EB%AC%B8%EC%9D%98">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+            이메일 보내기
+          </a>
+          <p class="reply-note">1인 개발 프로젝트라 답장에 며칠 걸릴 수 있어요. 너그러이 기다려 주세요 🙏</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <a href="privacy.html">개인정보 처리방침</a>
+      <span class="dot">·</span>
+      <a href="mailto:rumi.maker@gmail.com">rumi.maker@gmail.com</a>
+      <p style="margin-top:14px;">© 2026 CookFit</p>
+    </div>
+  </footer>
+</body>
+</html>
